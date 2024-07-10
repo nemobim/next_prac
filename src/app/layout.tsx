@@ -1,4 +1,4 @@
-import SideBar from '@/components/layout/SideBar'
+import Header from '@/components/layout/Header'
 import type { Metadata } from 'next'
 import 'remixicon/fonts/remixicon.css'
 import './globals.css'
@@ -17,12 +17,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <div className="flex flex-row gap-5 p-5">
-          <SideBar />
-          <div className="flex w-full flex-col rounded-md bg-white shadow-lg">
-            <div className="p-5">{children}</div>
-          </div>
-        </div>
+        <Header />
+        {children}
       </body>
     </html>
   )
