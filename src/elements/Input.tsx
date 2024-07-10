@@ -5,7 +5,7 @@ import { useCallback, useState } from 'react'
 export const SearchInput = () => {
   const [searchTerm, setSearchTerm] = useState('')
 
-  const handleChange = useCallback(e => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value)
   }, [])
 
